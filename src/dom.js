@@ -15,6 +15,7 @@ async function showWeather(city, pos, units='metric'){
     coords.country = ubi.countryName
   }
   const obj = await fetchWeather(coords.lat,coords.lon,units);
+  console.log(obj)
   const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   const currentW = obj.current;
   const dailyW = obj.daily;
@@ -36,7 +37,7 @@ async function showWeather(city, pos, units='metric'){
     divTime.textContent = `${currentW.weather[0].description}`;
     details[0].textContent = `${currentW.feels_like} ${symbol}`
     details[1].textContent = `${currentW.humidity}%`;
-    details[2].textContent = `${dailyW[0].pop}%`;
+    details[2].textContent = `${dailyW[0].pop*100}%`;
     details[3].textContent = `${dailyW[0].temp.min} ${symbol}`;
     details[4].textContent = `${dailyW[0].temp.max} ${symbol}`;
   }
@@ -58,8 +59,8 @@ async function showWeather(city, pos, units='metric'){
       let currDay = days[currDate.getDay()];
       el.childNodes[1].textContent = `${dailyW[idx].temp.day} ${symbol}`;
       el.childNodes[3].textContent = `${currDay}`;
-      dayDetail1[idx].textContent = `${dailyW[idx].feels_like.day}`;
-      dayDetail2[idx].textContent = `${dailyW[idx].humidity}`;
+      dayDetail1[idx].textContent = `${Math.round(dailyW[idx].feels_like.day)}${symbol}`;
+      dayDetail2[idx].textContent = `${dailyW[idx].humidity}%`;
       dayIcons[idx].src = `http://openweathermap.org/img/wn/${dailyW[idx].weather[0].icon}@2x.png`
     });
   }
@@ -109,10 +110,10 @@ unitsSwitch.addEventListener('change',(e) =>{
 })
 
 const languageDiv = document.querySelector('.language');
-const drop = new Dropdown('.language','Lang', {animation:'animation2',width:'50px',height:'20px'});
-drop.appendElement('En');
-drop.appendElement('Es');
-drop.appendElement('Fr');
+const drop = new Dropdown('.language','Language', {animation:'animation2',width:'80px',height:'20px',textTransform:'capitalize'});
+drop.appendElement('English');
+drop.appendElement('Español');
+drop.appendElement('Français');
 
 getLocation()
 

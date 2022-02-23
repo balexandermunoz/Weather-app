@@ -15,18 +15,18 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f186;
+  background: rgb(100, 100, 100);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background: rgb(100, 100, 100);
+  background: #f1f1f186;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #f1f1f1af;
 } 
 /* End ScrollBar */
 
@@ -58,6 +58,11 @@ header {
 
 .unit{
   display: flex;
+}
+
+b,i{
+  color: #fff;
+  padding: 0 5px;
 }
 
 /* Toggle button */
@@ -104,6 +109,9 @@ label:active:after {
 }
 /* End toggle button */
 .div-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
 }
 #city-input{
@@ -114,8 +122,9 @@ label:active:after {
 
 /* Main */
 .current-wheater {
-  height: 48vh;
+  height: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.322);
   border-radius: 20px;
@@ -140,7 +149,7 @@ th{
 
 /* Col 2 in first car */
 .col2{
-  max-height: 100%;
+  max-height: 45vh;
   overflow: auto;
   padding: 10px;
 }
@@ -157,7 +166,7 @@ th{
 }
 
 .next-day {
-  width: 120px;
+  width: 140px;
   border-radius: 10px;
   padding: 10px;
   background-color: rgba(250, 235, 215, 0.486);
@@ -166,4 +175,48 @@ th{
 .day-icon{
   margin: -20px 0;
   padding: 0;
+}
+
+@media (max-width: 450px) {
+  .current-wheater{
+    height: 52vh;
+  }
+  .col2 {
+    max-height: 12%;
+    overflow-y: hidden;
+  }
+  .table2 {
+    display: flex;
+    background: none;
+  }
+
+  .table2 tbody {
+    display: flex;
+    gap: 25px;
+    min-width: min-content;
+  }
+
+  th{
+    display: block;
+    float: left;
+  }
+  .table2 th,.table2 td{
+    display: block;
+  }
+}
+
+@media (max-width: 300px) {
+  .temp{
+    font-size: 3em;
+  }
+  .main-icon{
+    width: 4em;
+  }
+}
+
+
+@media (max-height: 630px) and (max-width: 450px) {
+  .col2{
+    display: none;
+  }
 }
