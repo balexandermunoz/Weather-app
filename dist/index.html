@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e4016579a1.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <header>
+      <div class="unit">
+        <b>F</b>
+        <input type="checkbox" id="switch" checked /><label for="switch">Toggle</label>
+        <b> C</b>
+      </div>
+      <div class="div-input">
+        <input id="city-input" type="text" class="city-input" placeholder="Enter your city">
+        <i id="enter-button" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="language"> </div>
+    </header>
+
+    <main class="current-wheater">
+      <div class="col1">
+        <div class="head">
+          <div class="temp">20°C </div>
+          <img class="main-icon" src="images/defaultIcon.png" alt="Current weather icon">
+        </div>
+        <div class="city">Today - Medellín Col</div>
+        <div class="time"> Clouds</div>
+
+        <table style="width:70%">
+          <tr> <th>Sensación:</th> <td class="detail"> 20°C</td> </tr>
+          <tr> <th>Humedad:  </th> <td class="detail"> 55% </td> </tr>
+          <tr> <th>Prob. de lluvia:</th> <td class="detail">1%</td> </tr>
+          <tr> <th>Temp. min:</th> <td class="detail">1%</td> </tr>
+          <tr> <th>Temp. max:</th> <td class="detail">1%</td> </tr>
+        </table>
+
+      </div>
+      <div class="col2">
+        <table>
+          <tr class="hour1">
+            <th>01:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour2">
+            <th>02:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour3">
+            <th>03:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour4">
+            <th>04:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour5">
+            <th>05:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour6">
+            <th>06:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour7">
+            <th>07:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour8">
+            <th>08:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour9">
+            <th>09:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour10">
+            <th>10:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour11">
+            <th>11:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour12">
+            <th>12:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour13">
+            <th>13:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour14">
+            <th>14:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour15">
+            <th>15:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour16">
+            <th>16:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour17">
+            <th>17:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour18">
+            <th>18:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour19">
+            <th>19:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour20">
+            <th>20:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour21">
+            <th>21:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour22">
+            <th>22:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour23">
+            <th>23:00</th>
+            <td class="hour"></td>
+          </tr>
+          <tr class="hour24">
+            <th>24:00</th>
+            <td class="hour"></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+
+    <div class="next-days">
+
+      <div class="next-day day0">
+        <div>20°C</div>
+        <div>Tomorrow</div>
+        <img class="day-icon" src="images/defaultIcon.png" alt="Tomorrow weather icon">
+        <table style="width:100%">
+          <tr> <th>Sensación:</th> <td class="day-detail1"> 20°C</td> </tr>
+          <tr> <th>Humedad:  </th> <td class="day-detail2"> 55% </td> </tr>
+        </table>
+      </div>
+
+      <div class="next-day day1">
+        <div>20°C</div>
+        <div>Day 2</div>
+        <img class="day-icon" src="images/defaultIcon.png" alt="Day 2 weather icon">
+        <table style="width:100%">
+          <tr> <th>Sensación:</th> <td class="day-detail1"> 20°C</td> </tr>
+          <tr> <th>Humedad:  </th> <td class="day-detail2"> 55% </td> </tr>
+        </table>
+      </div>
+
+      <div class="next-day day2">
+        <div>20°C</div>
+        <div>Day 3</div>
+        <img class="day-icon" src="images/defaultIcon.png" alt="Day 2 weather icon">
+        <table style="width:100%">
+          <tr> <th>Sensación:</th> <td class="day-detail1"> 20°C</td> </tr>
+          <tr> <th>Humedad:  </th> <td class="day-detail2"> 55% </td> </tr>
+        </table>
+      </div>
+
+      <div class="next-day day3">
+        <div>20°C</div>
+        <div>Day 4</div>
+        <img class="day-icon" src="images/defaultIcon.png" alt="Day 2 weather icon">
+        <table style="width:100%">
+          <tr> <th>Sensación:</th> <td class="day-detail1"> 20°C</td> </tr>
+          <tr> <th>Humedad:  </th> <td class="day-detail2"> 55% </td> </tr>
+        </table>
+      </div>
+
+      <div class="next-day day4">
+        <div> 20°C</div>
+        <div> Day 5</div>
+        <img class="day-icon" src="images/defaultIcon.png" alt="Day 2 weather icon">
+        <table style="width:100%">
+          <tr> <th>Sensación:</th> <td class="day-detail1"> 20°C</td> </tr>
+          <tr> <th>Humedad:  </th> <td class="day-detail2"> 55% </td> </tr>
+        </table>
+      </div>
+
+      <div class="next-day day5">
+        <div> 20°C</div>
+        <div> Day 6</div>
+        <img class="day-icon" src="images/defaultIcon.png" alt="Day 2 weather icon">
+        <table style="width:100%">
+          <tr> <th>Sensación:</th> <td class="day-detail1"> 20°C</td> </tr>
+          <tr> <th>Humedad:  </th> <td class="day-detail2"> 55% </td> </tr>
+        </table>
+      </div>  
+
+      <div class="next-day day6">
+        <div> 20°C</div>
+        <div> Day 6</div>
+        <img class="day-icon" src="images/defaultIcon.png" alt="Day 2 weather icon">
+        <table style="width:100%">
+          <tr> <th>Sensación:</th> <td class="day-detail1"> 20°C</td> </tr>
+          <tr> <th>Humedad:  </th> <td class="day-detail2"> 55% </td> </tr>
+        </table>
+      </div>  
+
+    </div>
+  </body>
+</html>
