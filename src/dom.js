@@ -15,7 +15,6 @@ async function showWeather(city, pos, units='metric'){
     coords.country = ubi.countryName
   }
   const obj = await fetchWeather(coords.lat,coords.lon,units);
-  console.log(obj)
   const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   const currentW = obj.current;
   const dailyW = obj.daily;

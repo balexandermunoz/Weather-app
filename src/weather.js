@@ -1,6 +1,6 @@
 async function fetchCoords(cityName){
   const geoApiKey = '43f042b1637b39a8ee93d442afed514b';
-  const link = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${geoApiKey}`;
+  const link = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${geoApiKey}`;
   try {
     const response = await fetch(link,{ mode: "cors" });
     const dataRaw = await response.json();
@@ -14,7 +14,6 @@ async function fetchCoords(cityName){
 
 async function fetchWeather(lat,lon,units='metric'){
   let lang = 'es';//fr: french, en: english;
-  //data.name;data.country;data.lat;data.lon;
   const geoApiKey = '43f042b1637b39a8ee93d442afed514b';
   const link = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&lang=${lang}&units=${units}&appid=${geoApiKey}`;
   const response = await fetch(link,{ mode: "cors" });
