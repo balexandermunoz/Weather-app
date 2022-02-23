@@ -29,7 +29,7 @@ async function showWeather(city, pos, units='metric'){
     const divTime = document.querySelector('.time');
     const details = document.querySelectorAll('.detail');
     const mainIcon = document.querySelector('.main-icon');
-    mainIcon.src = `http://openweathermap.org/img/wn/${currentW.weather[0].icon}@2x.png`
+    mainIcon.src = `https://openweathermap.org/img/wn/${currentW.weather[0].icon}@2x.png`
 
     divTemp.textContent = currentW.temp + symbol;
     city.textContent = `${coords.name}, ${coords.state}, ${coords.country}`;
