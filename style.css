@@ -1,0 +1,169 @@
+/* Degrees font: */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+/* ScrollBar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f186;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: rgb(100, 100, 100);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 
+/* End ScrollBar */
+
+.background1{
+  background-image: url("images/darkClouds.jpg") ;
+  background-size: cover;
+}
+.background2{
+  background-image: url("images/Storm.jpg");
+  background-size: cover;
+}
+.background3{
+  background-image: url("images/clear.jpg") ;
+  background-size: cover;
+}
+.background4{
+  background-image: url("images/sun.jpg") ;
+  background-size: cover;
+}
+
+/* Header: */
+header {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.unit{
+  display: flex;
+}
+
+/* Toggle button */
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 40px;
+	height: 20px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #bada55;
+}
+
+input:checked + label:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 20px;
+}
+/* End toggle button */
+.div-input{
+  width: 50%;
+}
+#city-input{
+  border-radius: 10px;
+  width: 80%;
+  height: 20px;
+}
+
+/* Main */
+.current-wheater {
+  height: 48vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.322);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.head {
+  display: flex;
+}
+
+.col1{
+  font-family: 'Oswald', sans-serif;
+}
+
+th{
+  text-align:left ;
+}
+
+.temp {
+  font-size: 4rem;
+}
+
+/* Col 2 in first car */
+.col2{
+  max-height: 100%;
+  overflow: auto;
+  padding: 10px;
+}
+.hour {
+  padding: 5px 0;
+}
+
+/* Other days cards */
+.next-days {
+  display: flex;
+  overflow: auto;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.next-day {
+  width: 120px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(250, 235, 215, 0.486);
+}
+
+.day-icon{
+  margin: -20px 0;
+  padding: 0;
+}
