@@ -60,7 +60,7 @@ async function showWeather(city, pos, units='metric'){
       el.childNodes[3].textContent = `${currDay}`;
       dayDetail1[idx].textContent = `${Math.round(dailyW[idx].feels_like.day)}${symbol}`;
       dayDetail2[idx].textContent = `${dailyW[idx].humidity}%`;
-      dayIcons[idx].src = `http://openweathermap.org/img/wn/${dailyW[idx].weather[0].icon}@2x.png`
+      dayIcons[idx].src = `https://openweathermap.org/img/wn/${dailyW[idx].weather[0].icon}@2x.png`
     });
   }
 }
